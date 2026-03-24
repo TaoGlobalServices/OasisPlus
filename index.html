@@ -3,163 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oasis Plus | Premium Thai Perishable Export to Maldives</title>
-    
-    <meta name="description" content="Oasis Plus - Leading exporter of premium Thai fruits, vegetables, and fresh eggs to the Maldives. Expert cold-chain logistics.">
+    <title>Oasis Plus | Premium Export to Maldives</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Prompt:wght@400;600&family=Noto+Sans+Thaana:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        :root {
-            --navy: #0f172a;
-            --emerald: #10b981;
-            --gold: #fbbf24;
-        }
-        body { font-family: 'Inter', 'Prompt', sans-serif; }
-        .thai-text { font-family: 'Prompt', sans-serif; font-size: 0.9em; opacity: 0.85; display: block; margin-top: 2px; }
+        :root { --navy: #0f172a; --emerald: #10b981; }
+        body { font-family: 'Inter', 'Prompt', 'Noto Sans Thaana', sans-serif; transition: all 0.3s ease; }
+        
+        /* Language Display Logic */
+        [lang="th"] .lang-en, [lang="th"] .lang-dv,
+        [lang="en"] .lang-th, [lang="en"] .lang-dv,
+        [lang="dv"] .lang-en, [lang="dv"] .lang-th { display: none; }
+
+        /* RTL Logic for Maldives Language */
+        [dir="rtl"] { text-align: right; }
         .bg-navy { background-color: var(--navy); }
-        .text-emerald { color: var(--emerald); }
         .bg-emerald { background-color: var(--emerald); }
-        .border-gold { border-color: var(--gold); }
+        .text-emerald { color: var(--emerald); }
     </style>
 </head>
-<body class="bg-white text-slate-800">
+<body lang="en" dir="ltr" class="bg-white text-slate-800">
 
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-emerald rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">OP</div>
-                <span class="text-2xl font-black tracking-tighter text-slate-900 uppercase">Oasis<span class="text-emerald">Plus</span></span>
+                <div class="w-10 h-10 bg-emerald rounded-lg flex items-center justify-center text-white font-bold text-xl">OP</div>
+                <span class="text-2xl font-black text-slate-900 uppercase">Oasis<span class="text-emerald">Plus</span></span>
             </div>
-            <div class="hidden lg:flex gap-10 items-center text-xs font-bold uppercase tracking-widest text-slate-600">
-                <a href="#home" class="hover:text-emerald transition">Home <span class="thai-text text-[10px] lowercase">หน้าแรก</span></a>
-                <a href="#products" class="hover:text-emerald transition">Products <span class="thai-text text-[10px] lowercase">สินค้า</span></a>
-                <a href="#logistics" class="hover:text-emerald transition">Logistics <span class="thai-text text-[10px] lowercase">การขนส่ง</span></a>
-                <a href="#contact" class="bg-navy text-white px-8 py-3 rounded-full hover:bg-emerald transition shadow-lg">
-                    Contact <span class="text-[10px] opacity-70 ml-1">ติดต่อเรา</span>
-                </a>
+
+            <div class="flex items-center gap-4">
+                <div class="hidden lg:flex gap-8 text-xs font-bold uppercase tracking-widest mr-4">
+                    <a href="#home" class="hover:text-emerald">
+                        <span class="lang-en">Home</span><span class="lang-th">หน้าแรก</span><span class="lang-dv">ފުރަތަމަ ސަފުހާ</span>
+                    </a>
+                    <a href="#products" class="hover:text-emerald">
+                        <span class="lang-en">Products</span><span class="lang-th">สินค้า</span><span class="lang-dv">އުފެއްދުންތައް</span>
+                    </a>
+                </div>
+
+                <div class="flex bg-slate-100 rounded-full p-1 text-[10px] font-bold border border-slate-200 shadow-inner">
+                    <button onclick="setLang('en')" class="px-3 py-1 rounded-full hover:bg-white hover:shadow-sm transition">EN</button>
+                    <button onclick="setLang('th')" class="px-3 py-1 rounded-full hover:bg-white hover:shadow-sm transition">TH</button>
+                    <button onclick="setLang('dv')" class="px-3 py-1 rounded-full hover:bg-white hover:shadow-sm transition font-normal">ދިވެހި</button>
+                </div>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="relative h-[90vh] flex items-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1610348725531-843dff563e2c?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover" alt="Fresh Produce Export">
-            <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+    <section id="home" class="relative h-[85vh] flex items-center overflow-hidden bg-navy text-white">
+        <div class="absolute inset-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1610348725531-843dff563e2c?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover">
         </div>
-        <div class="relative z-10 max-w-7xl mx-auto px-6 text-white">
-            <span class="inline-block px-4 py-1.5 mb-6 text-[10px] font-bold tracking-[0.3em] text-amber-400 uppercase border border-amber-400/50 rounded-full bg-amber-400/10">
-                Strategic Sourcing Excellence
-            </span>
-            <h1 class="text-5xl lg:text-8xl font-extrabold mb-8 leading-tight">
-                Superior Freshness. <br><span class="text-emerald">Anywhere.</span>
-                <span class="thai-text text-2xl lg:text-3xl font-normal mt-4 block">คุณภาพความสดใหม่ ส่งตรงถึงมัลดีฟส์</span>
+        <div class="relative z-10 max-w-7xl mx-auto px-6">
+            <h1 class="text-5xl lg:text-8xl font-black mb-6 leading-tight">
+                <span class="lang-en text-emerald">Superior Freshness.</span>
+                <span class="lang-th text-emerald">คุณภาพความสดใหม่</span>
+                <span class="lang-dv text-emerald">މަތީ ފެންވަރުގެ ތާޒާކަން</span>
             </h1>
-            <p class="text-xl text-slate-300 mb-12 max-w-2xl leading-relaxed">
-                Oasis Plus bridges the gap between premium Thai farms and global luxury markets with precision cold-chain management.
-                <span class="thai-text mt-2">เราเชื่อมต่อเกษตรกรไทยสู่ตลาดโลก ด้วยระบบการจัดการ Cold Chain มาตรฐานสากล</span>
+            <p class="text-xl lg:text-2xl mb-10 max-w-2xl opacity-90">
+                <span class="lang-en">Direct from Thai farms to Maldives luxury resorts.</span>
+                <span class="lang-th">ส่งตรงจากไร่ไทย สู่รีสอร์ทหรูในมัลดีฟส์</span>
+                <span class="lang-dv">ތައިލެންޑުގެ ދަނޑުވެރިކަމުން ސީދާ ރާއްޖޭގެ ރިސޯޓްތަކަށް</span>
             </p>
-            <div class="flex flex-col sm:flex-row gap-5">
-                <a href="#products" class="px-10 py-5 bg-emerald text-white rounded-xl font-bold text-center hover:bg-emerald-400 transition shadow-2xl">View Catalog <span class="thai-text font-normal">รายการสินค้า</span></a>
-                <a href="#contact" class="px-10 py-5 border-2 border-white text-white rounded-xl font-bold text-center hover:bg-white hover:text-navy transition">Get a Quote <span class="thai-text font-normal">ขอใบเสนอราคา</span></a>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-12 bg-navy text-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left">
-            <div class="p-6 border-r border-slate-700 last:border-0">
-                <h4 class="font-bold text-emerald tracking-widest uppercase text-sm mb-2">Quality Assurance</h4>
-                <p class="text-slate-300">Certified export-grade produce only.</p>
-                <span class="thai-text text-slate-500">คัดสรรสินค้าเกรดส่งออกมาตรฐานสากล</span>
-            </div>
-            <div class="p-6 border-r border-slate-700 last:border-0">
-                <h4 class="font-bold text-emerald tracking-widest uppercase text-sm mb-2">Cold Chain Mastery</h4>
-                <p class="text-slate-300">24/7 temperature-controlled logistics.</p>
-                <span class="thai-text text-slate-500">ระบบควบคุมอุณหภูมิตลอด 24 ชั่วโมง</span>
-            </div>
-            <div class="p-6 border-r border-slate-700 last:border-0">
-                <h4 class="font-bold text-emerald tracking-widest uppercase text-sm mb-2">Global Expertise</h4>
-                <p class="text-slate-300">Managed by partners across 3 nations.</p>
-                <span class="thai-text text-slate-500">ดูแลโดยพาร์ทเนอร์ผู้เชี่ยวชาญจาก 3 สัญชาติ</span>
-            </div>
+            <a href="#contact" class="px-10 py-5 bg-emerald text-white rounded-xl font-bold hover:opacity-90 transition inline-block shadow-2xl">
+                <span class="lang-en">Request Quote</span><span class="lang-th">ขอใบเสนอราคา</span><span class="lang-dv">ކޯޓޭޝަން ބޭނުން</span>
+            </a>
         </div>
     </section>
 
     <section id="products" class="py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-6 text-center lg:text-left">
-            <div class="mb-16">
-                <h2 class="text-4xl font-extrabold text-slate-900 mb-2">Premium Commodities</h2>
-                <span class="thai-text text-xl text-slate-500">สินค้าพรีเมียมคัดพิเศษจากไร่</span>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all">
-                    <div class="h-64 overflow-hidden relative border-b-4 border-emerald">
-                        <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Fresh Produce">
-                    </div>
-                    <div class="p-10">
-                        <h3 class="text-2xl font-bold text-slate-900">Fresh Produce</h3>
-                        <span class="thai-text text-emerald font-bold mb-4">ผักและผลไม้สด</span>
-                        <p class="text-slate-500 mb-6">Seasonal Thai fruits and vegetables sourced directly from GAP certified farms.</p>
-                        <a href="#contact" class="font-bold text-navy hover:text-emerald transition underline">Inquiry <span class="thai-text inline">สอบถามข้อมูล</span></a>
-                    </div>
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-black mb-16 text-navy">
+                <span class="lang-en">Our Commodities</span><span class="lang-th">สินค้าของเรา</span><span class="lang-dv">އަޅުގަނޑުމެންގެ ތަކެތި</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border-b-4 border-emerald">
+                    <div class="text-4xl mb-4">🥭</div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-en">Fresh Produce</span><span class="lang-th">ผักและผลไม้สด</span><span class="lang-dv">ތަރުކާރީ އާއި މޭވާ</span>
+                    </h3>
                 </div>
-
-                <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all">
-                    <div class="h-64 overflow-hidden relative border-b-4 border-amber-400">
-                        <img src="https://images.unsplash.com/photo-1587486914762-8f0554cb4f1b?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Fresh Eggs">
-                    </div>
-                    <div class="p-10">
-                        <h3 class="text-2xl font-bold text-slate-900">Wholesale Eggs</h3>
-                        <span class="thai-text text-emerald font-bold mb-4">ไข่ไก่สดเกรดส่งออก</span>
-                        <p class="text-slate-500 mb-6">Strictly graded fresh eggs with shock-proof packaging for long-distance transit.</p>
-                        <a href="#contact" class="font-bold text-navy hover:text-emerald transition underline">Inquiry <span class="thai-text inline">สอบถามข้อมูล</span></a>
-                    </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border-b-4 border-amber-400">
+                    <div class="text-4xl mb-4">🥚</div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-en">Fresh Eggs</span><span class="lang-th">ไข่ไก่สด</span><span class="lang-dv">ތާޒާ ބިސް</span>
+                    </h3>
                 </div>
-
-                <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all">
-                    <div class="h-64 overflow-hidden relative border-b-4 border-emerald">
-                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Resort Supply">
-                    </div>
-                    <div class="p-10">
-                        <h3 class="text-2xl font-bold text-slate-900">Hospitality Supply</h3>
-                        <span class="thai-text text-emerald font-bold mb-4">วัตถุดิบกลุ่มโรงแรม</span>
-                        <p class="text-slate-500 mb-6">Tailored procurement services for luxury resorts and the hospitality sector.</p>
-                        <a href="#contact" class="font-bold text-navy hover:text-emerald transition underline">Inquiry <span class="thai-text inline">สอบถามข้อมูล</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="logistics" class="py-24 bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center text-center lg:text-left">
-            <div class="relative">
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000" class="rounded-[40px] shadow-3xl" alt="Logistics">
-                <div class="absolute -bottom-6 -right-6 bg-emerald p-8 rounded-3xl text-white shadow-xl">
-                    <div class="text-4xl font-black mb-1 italic">FAST</div>
-                    <div class="text-xs font-bold uppercase tracking-widest opacity-80">Customs Clearance</div>
-                </div>
-            </div>
-            <div>
-                <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-8 leading-tight">Reliable Supply. <br><span class="text-emerald">Unmatched Speed.</span></h2>
-                <span class="thai-text text-xl mb-6 text-slate-500">ระบบขนส่งที่ไร้พรมแดน รวดเร็ว และแม่นยำ</span>
-                <p class="text-lg text-slate-600 mb-10 leading-relaxed">
-                    We specialize in high-speed air and sea freight from Thailand to Male City, ensuring your perishables never break the cold chain.
-                    <span class="thai-text mt-4">เราเชี่ยวชาญการขนส่งทางอากาศและทางทะเลจากไทยสู่มัลดีฟส์ เพื่อให้สินค้าถึงมือด้วยคุณภาพระดับสูงสุด</span>
-                </p>
-                <div class="flex gap-10 justify-center lg:justify-start">
-                    <div class="text-center">
-                        <div class="text-3xl font-black text-navy">15+</div>
-                        <div class="text-[10px] uppercase font-bold text-slate-400">Years Exp</div>
-                    </div>
-                    <div class="text-center border-l border-slate-200 pl-10">
-                        <div class="text-3xl font-black text-navy">24h</div>
-                        <div class="text-[10px] uppercase font-bold text-slate-400">Response</div>
-                    </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border-b-4 border-blue-500">
+                    <div class="text-4xl mb-4">🏨</div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-en">Resort Supply</span><span class="lang-th">สินค้าโรงแรม</span><span class="lang-dv">ރިސޯޓް ސަޕްލައި</span>
+                    </h3>
                 </div>
             </div>
         </div>
@@ -167,45 +104,44 @@
 
     <section id="contact" class="py-24 bg-navy text-white">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-extrabold mb-4 uppercase tracking-tighter">Global Inquiry Desk</h2>
-            <span class="thai-text text-xl text-emerald mb-12">เริ่มต้นธุรกิจและติดต่อสอบถามข้อมูล</span>
-            
-            <form action="#" class="grid md:grid-cols-2 gap-4 text-left">
-                <div class="flex flex-col">
-                    <label class="text-[10px] uppercase font-bold mb-2 tracking-widest text-slate-500">Full Name / ชื่อ</label>
-                    <input type="text" class="bg-slate-800 border-none rounded-xl p-4 focus:ring-2 focus:ring-emerald outline-none">
-                </div>
-                <div class="flex flex-col">
-                    <label class="text-[10px] uppercase font-bold mb-2 tracking-widest text-slate-500">Email / อีเมล</label>
-                    <input type="email" class="bg-slate-800 border-none rounded-xl p-4 focus:ring-2 focus:ring-emerald outline-none">
-                </div>
-                <div class="flex flex-col md:col-span-2">
-                    <label class="text-[10px] uppercase font-bold mb-2 tracking-widest text-slate-500">Inquiry Details / รายละเอียดสินค้า</label>
-                    <textarea rows="4" class="bg-slate-800 border-none rounded-xl p-4 focus:ring-2 focus:ring-emerald outline-none"></textarea>
-                </div>
-                <button type="submit" class="md:col-span-2 py-5 bg-emerald text-white rounded-xl font-bold hover:bg-emerald-400 transition-all shadow-xl">
-                    Submit Requirements <span class="thai-text font-normal inline">ส่งข้อมูลติดต่อ</span>
+            <h2 class="text-3xl font-bold mb-12">
+                <span class="lang-en">Inquiry Form</span><span class="lang-th">แบบฟอร์มติดต่อสอบถาม</span><span class="lang-dv">ގުޅުއްވުމަށް</span>
+            </h2>
+            <form action="https://formspree.io/f/mojqeqaz" method="POST" class="grid gap-4 text-left" dir="ltr">
+                <input type="text" name="name" required placeholder="Full Name" class="bg-slate-800 border-none rounded-xl p-4 text-white outline-none">
+                <input type="email" name="email" required placeholder="Email Address" class="bg-slate-800 border-none rounded-xl p-4 text-white outline-none">
+                <textarea name="message" rows="4" required placeholder="Details of your requirement" class="bg-slate-800 border-none rounded-xl p-4 text-white outline-none"></textarea>
+                <button type="submit" class="py-5 bg-emerald text-white rounded-xl font-bold hover:bg-emerald-400 transition-all shadow-xl">
+                    <span class="lang-en">Submit</span><span class="lang-th">ส่งข้อมูล</span><span class="lang-dv">ފޮނުވާލަން</span>
                 </button>
             </form>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-slate-100 bg-white">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="flex flex-col items-center md:items-start">
-                <div class="text-2xl font-black tracking-tighter text-slate-900 uppercase">Oasis<span class="text-emerald">Plus</span></div>
-                <p class="text-slate-400 text-xs mt-2 uppercase tracking-widest">Premium Perishable Logistics</p>
-            </div>
-            <div class="text-center md:text-right">
-                <p class="text-slate-500 text-sm font-semibold">© 2026 Oasis Plus Co., Ltd. All Rights Reserved.</p>
-                <div class="flex gap-4 mt-2 justify-center md:justify-end text-xs text-slate-400">
-                    <span>Thailand (BKK)</span>
-                    <span>|</span>
-                    <span>Maldives (MLE)</span>
-                </div>
-            </div>
-        </div>
+    <footer class="py-12 border-t text-center text-slate-400 text-sm">
+        © 2024 Oasis Plus Co., Ltd. | Bangkok - Maldives
     </footer>
+
+    <script>
+        function setLang(lang) {
+            document.body.setAttribute('lang', lang);
+            
+            // If Dhivehi (dv), set direction to RTL, otherwise LTR
+            if (lang === 'dv') {
+                document.body.setAttribute('dir', 'rtl');
+            } else {
+                document.body.setAttribute('dir', 'ltr');
+            }
+            
+            localStorage.setItem('oasisLang', lang);
+        }
+
+        // Initialize saved language
+        window.onload = () => {
+            const saved = localStorage.getItem('oasisLang') || 'en';
+            setLang(saved);
+        };
+    </script>
 
 </body>
 </html>
