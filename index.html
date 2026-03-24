@@ -1,217 +1,142 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oasis Plus | Elite Perishable Export Thailand to Maldives</title>
-    
-    <meta name="description" content="Oasis Plus: Premium Thai fruits, vegetables, and fresh eggs exported with elite cold-chain logistics to the Maldives. Managed by international experts.">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Prompt:wght@400;600&family=Noto+Sans+Thaana:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oasis Plus | Premium Supply to Maldives Resorts</title>
 
-    <style>
-        :root { --navy: #0f172a; --emerald: #10b981; --amber: #fbbf24; }
-        body { font-family: 'Inter', 'Prompt', 'Noto Sans Thaana', sans-serif; transition: background-color 0.3s ease; }
-        
-        /* Language Visibility Switcher */
-        body[lang="th"] .lang-en, body[lang="th"] .lang-dv,
-        body[lang="en"] .lang-th, body[lang="en"] .lang-dv,
-        body[lang="dv"] .lang-en, body[lang="dv"] .lang-th { display: none; }
+  <script src="https://cdn.tailwindcss.com"></script>
 
-        .bg-navy { background-color: var(--navy); }
-        .bg-emerald { background-color: var(--emerald); }
-        .text-emerald { color: var(--emerald); }
-        .border-emerald { border-color: var(--emerald); }
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-        /* Language Toggle Active State */
-        .btn-active { background-color: white !important; color: var(--emerald) !important; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .lux-title { font-family: 'Playfair Display', serif; }
 
-        /* Animations */
-        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .animate-marquee { display: inline-block; animation: marquee 25s linear infinite; }
-        .pulse-emerald { animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); } 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); } }
-    </style>
+    body[lang="en"] .lang-th,
+    body[lang="en"] .lang-dv { display: none; }
+
+    body[lang="th"] .lang-en,
+    body[lang="th"] .lang-dv { display: none; }
+
+    body[lang="dv"] .lang-en,
+    body[lang="dv"] .lang-th { display: none; }
+
+    .active-lang { background: black; color: white; }
+  </style>
 </head>
-<body lang="en" dir="ltr" class="bg-white text-slate-900 selection:bg-emerald/20">
 
-    <div class="bg-emerald text-white py-2 overflow-hidden whitespace-nowrap text-[10px] font-bold uppercase tracking-widest z-[60] relative">
-        <div class="inline-block animate-marquee px-4">
-            <span class="mx-8">• Fresh Mangoes & Seasonal Produce Arriving Weekly</span>
-            <span class="mx-8">• Cold-Chain Route: Bangkok (BKK) to Male (MLE) Active</span>
-            <span class="mx-8">• Premium Grade AA Eggs Ready for Export</span>
-            <span class="mx-8">• 24/7 Logistics Coordination Support</span>
-            <span class="mx-8">• Fresh Mangoes & Seasonal Produce Arriving Weekly</span>
-            <span class="mx-8">• Cold-Chain Route: Bangkok (BKK) to Male (MLE) Active</span>
-        </div>
-    </div>
+<body class="bg-white text-slate-900">
 
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-navy rounded-xl flex items-center justify-center text-white font-black italic shadow-lg">OP</div>
-                <span class="text-xl font-black tracking-tighter uppercase">Oasis<span class="text-emerald">Plus</span></span>
-            </div>
+<!-- LANGUAGE -->
+<div class="fixed top-5 right-5 z-50">
+  <div class="flex bg-white border rounded-full shadow">
+    <button onclick="setLang('en')" id="btn-en" class="px-4 py-2 text-xs font-bold">EN</button>
+    <button onclick="setLang('th')" id="btn-th" class="px-4 py-2 text-xs font-bold">TH</button>
+    <button onclick="setLang('dv')" id="btn-dv" class="px-4 py-2 text-xs font-bold">ދިވެހި</button>
+  </div>
+</div>
 
-            <div class="flex bg-slate-100 rounded-full p-1 border border-slate-200">
-                <button onclick="setLanguage('en')" id="btn-en" class="px-3 py-1.5 rounded-full text-[10px] font-black transition-all">EN</button>
-                <button onclick="setLanguage('th')" id="btn-th" class="px-3 py-1.5 rounded-full text-[10px] font-black transition-all">TH</button>
-                <button onclick="setLanguage('dv')" id="btn-dv" class="px-3 py-1.5 rounded-full text-[11px] font-bold transition-all">ދިވެހި</button>
-            </div>
-        </div>
-    </nav>
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center text-center px-6 bg-[url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e')] bg-cover bg-center">
+  <div class="bg-black/50 p-10 rounded-3xl">
 
-    <section id="home" class="relative pt-24 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-white">
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="max-w-4xl text-start">
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="w-2 h-2 bg-emerald rounded-full pulse-emerald"></span>
-                    <span class="text-[10px] font-black tracking-[0.3em] text-emerald uppercase">
-                        <span class="lang-en">Operational Excellence</span>
-                        <span class="lang-th">มาตรฐานการดำเนินงานระดับสากล</span>
-                        <span class="lang-dv">ކާމިޔާބު މަސައްކަތްތައް</span>
-                    </span>
-                </div>
-                <h1 class="text-6xl lg:text-9xl font-black tracking-tighter mb-8 leading-[0.9] text-slate-900">
-                    <span class="lang-en">Superior <br>Thai <span class="text-emerald">Freshness.</span></span>
-                    <span class="lang-th text-5xl lg:text-8xl">สินค้าไทย <br><span class="text-emerald">คุณภาพพรีเมียม</span></span>
-                    <span class="lang-dv">މަތީ ފެންވަރުގެ <br><span class="text-emerald">ތާޒާކަން.</span></span>
-                </h1>
-                <p class="text-xl text-slate-500 mb-10 max-w-xl leading-relaxed">
-                    <span class="lang-en">Directly connecting premium Thai farms to Maldives luxury resorts with precision cold-chain management.</span>
-                    <span class="lang-th">เชื่อมต่อผลผลิตพรีเมียมจากเกษตรกรไทย สู่รีสอร์ทหรูในมัลดีฟส์ ด้วยระบบขนส่งควบคุมอุณหภูมิที่แม่นยำ</span>
-                    <span class="lang-dv">ތައިލެންޑުގެ ދަނޑުވެރިކަމުން ސީދާ ރާއްޖޭގެ ރިސޯޓްތަކަށް އެންމެ ތާޒާކަމާއެކު ފޯރުކޮށްދިނުން.</span>
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#contact" class="px-10 py-5 bg-navy text-white rounded-2xl font-bold hover:bg-emerald transition-all shadow-2xl shadow-navy/20">
-                        <span class="lang-en">Start Inquiry</span><span class="lang-th">ติดต่อสอบถาม</span><span class="lang-dv">ގުޅުއްވުމަށް</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-slate-50 -z-10 rounded-l-[200px] hidden lg:block"></div>
-    </section>
+    <h1 class="lux-title text-5xl md:text-7xl text-white mb-6 leading-tight">
+      <span class="lang-en">Premium Thai Fresh Supply</span>
+      <span class="lang-th">สินค้าสดพรีเมียมจากประเทศไทย</span>
+      <span class="lang-dv">ތައިލެންޑުގެ ޕްރީމިއަމް ތާޒާ ސަޕްލައި</span>
+    </h1>
 
-    <section id="products" class="py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-black mb-16 text-center text-navy uppercase tracking-tighter">
-                <span class="lang-en">Global Commodities</span><span class="lang-th">รายการสินค้าหลัก</span><span class="lang-dv">އަޅުގަނޑުމެންގެ އުފެއްދުންތައް</span>
-            </h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border-b-4 border-emerald hover:shadow-2xl transition-all duration-500 text-start">
-                    <div class="text-4xl mb-6">🥭</div>
-                    <h3 class="text-2xl font-bold mb-4">
-                        <span class="lang-en">Fresh Produce</span><span class="lang-th">ผักและผลไม้สด</span><span class="lang-dv">ތާޒާ މޭވާ އާއި ތަރުކާރީ</span>
-                    </h3>
-                    <p class="text-slate-500 text-sm">GAP-certified fruits and vegetables sourced at peak ripeness.</p>
-                </div>
-                <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border-b-4 border-amber-400 hover:shadow-2xl transition-all duration-500 text-start">
-                    <div class="text-4xl mb-6">🥚</div>
-                    <h3 class="text-2xl font-bold mb-4">
-                        <span class="lang-en">Wholesale Eggs</span><span class="lang-th">ไข่ไก่สดเกรดส่งออก</span><span class="lang-dv">ތާޒާ ބިސް</span>
-                    </h3>
-                    <p class="text-slate-500 text-sm">Strictly graded fresh eggs with shock-proof export packaging.</p>
-                </div>
-                <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border-b-4 border-navy hover:shadow-2xl transition-all duration-500 text-start">
-                    <div class="text-4xl mb-6">🚢</div>
-                    <h3 class="text-2xl font-bold mb-4">
-                        <span class="lang-en">Cold Chain</span><span class="lang-th">การจัดการความเย็น</span><span class="lang-dv">ފިނިކޮށް ބެލެހެއްޓުން</span>
-                    </h3>
-                    <p class="text-slate-500 text-sm">End-to-end temperature monitoring from farm to resort jetty.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <p class="text-white/80 mb-8 max-w-xl mx-auto">
+      <span class="lang-en">Direct sourcing for Maldives luxury resorts. Weekly air shipments with precision handling.</span>
+      <span class="lang-th">จัดหาสินค้าให้รีสอร์ทระดับลักชัวรี่ในมัลดีฟส์ พร้อมส่งทางเครื่องบินทุกสัปดาห์</span>
+      <span class="lang-dv">ލަގްޒަރީ ރިސޯޓްތަކަށް ސީދާ ސަޕްލައި، ހަފްތާއިން އެއަރ ޝިޕްމެންޓް</span>
+    </p>
 
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="bg-navy rounded-[3rem] p-12 lg:p-20 flex flex-col lg:flex-row items-center justify-between gap-12 text-white">
-                <div class="max-w-xl text-start">
-                    <h2 class="text-4xl font-black mb-6">
-                        <span class="lang-en">Instant Procurement <br><span class="text-emerald">via WhatsApp</span></span>
-                        <span class="lang-th">สั่งซื้อสินค้าทันใจ <br><span class="text-emerald">ผ่าน WhatsApp</span></span>
-                        <span class="lang-dv">ވޮޓްސްއަޕް މެދުވެރިކޮށް <br><span class="text-emerald">ގުޅުއްވުމަށް</span></span>
-                    </h2>
-                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
-                        <span class="lang-en">Scan the QR code to chat directly with our sourcing desk. Fast, transparent, and direct communication.</span>
-                        <span class="lang-th">สแกน QR Code เพื่อคุยกับฝ่ายจัดหาของเราโดยตรง รวดเร็ว โปร่งใส และติดต่อได้ทันที</span>
-                        <span class="lang-dv">އަޅުގަނޑުމެންގެ ޓީމާ ސީދާ ވާހަކަދެއްކުމަށް ކިއުއާރު ކޯޑު ސްކޭން ކޮށްލައްވާ.</span>
-                    </p>
-                    <div class="flex items-center gap-4 text-emerald font-bold text-2xl">
-                        <i class="fab fa-whatsapp"></i> +66 92 156 3555
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-[2rem] shadow-2xl">
-                    <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https://wa.me/66921563555&choe=UTF-8" class="w-64 h-64" alt="WhatsApp QR">
-                    <p class="text-center mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest italic">Scan with Camera</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-24 bg-slate-50">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black mb-4 uppercase tracking-tighter">
-                    <span class="lang-en">Request Quote</span><span class="lang-th">ขอใบเสนอราคา</span><span class="lang-dv">ކޯޓޭޝަން ހޯއްދެވުމަށް</span>
-                </h2>
-                <div class="w-12 h-1 bg-emerald mx-auto"></div>
-            </div>
-            
-            <form action="https://formspree.io/f/mojqeqaz" method="POST" class="grid gap-4 text-start" dir="ltr">
-                <div class="grid md:grid-cols-2 gap-4">
-                    <input type="text" name="name" placeholder="Full Name / Name" required class="p-5 bg-white rounded-2xl outline-none focus:ring-2 focus:ring-emerald transition border border-slate-200">
-                    <input type="email" name="email" placeholder="Email Address / Contact" required class="p-5 bg-white rounded-2xl outline-none focus:ring-2 focus:ring-emerald transition border border-slate-200">
-                </div>
-                <textarea name="message" rows="5" placeholder="Requirements / Inquiry Details" required class="p-5 bg-white rounded-2xl outline-none focus:ring-2 focus:ring-emerald transition border border-slate-200"></textarea>
-                <button type="submit" class="py-5 bg-navy text-white rounded-2xl font-black uppercase tracking-widest hover:bg-emerald transition-all shadow-xl">
-                    <span class="lang-en">Submit Request</span><span class="lang-th">ส่งข้อมูล</span><span class="lang-dv">ފޮނުވާލަން</span>
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="py-12 bg-white border-t border-slate-100 text-center">
-        <div class="text-2xl font-black text-slate-900 uppercase tracking-tighter mb-2">Oasis<span class="text-emerald">Plus</span></div>
-        <p class="text-slate-400 text-[10px] uppercase tracking-[0.2em] mb-4">Precision Export Management • Bangkok - Male</p>
-        <p class="text-slate-300 text-[10px]">© 2026 Oasis Plus Co., Ltd. All Rights Reserved.</p>
-    </footer>
-
-    <a href="https://wa.me/66921563555" target="_blank" class="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center gap-3">
-        <i class="fab fa-whatsapp text-2xl"></i>
-        <span class="font-bold text-sm hidden md:block">Chat with Tao</span>
+    <a href="https://wa.me/66921563555"
+       class="px-8 py-4 bg-white text-black font-semibold rounded-xl hover:bg-slate-200 transition">
+       <span class="lang-en">Request Price</span>
+       <span class="lang-th">ขอราคา</span>
+       <span class="lang-dv">އަގު ހޯދާ</span>
     </a>
 
-    <script>
-        function setLanguage(lang) {
-            // Set Attribute
-            document.body.setAttribute('lang', lang);
-            
-            // Toggle RTL/LTR
-            if (lang === 'dv') {
-                document.body.setAttribute('dir', 'rtl');
-            } else {
-                document.body.setAttribute('dir', 'ltr');
-            }
+  </div>
+</section>
 
-            // Update Active Button UI
-            document.getElementById('btn-en').classList.remove('btn-active');
-            document.getElementById('btn-th').classList.remove('btn-active');
-            document.getElementById('btn-dv').classList.remove('btn-active');
-            document.getElementById('btn-' + lang).classList.add('btn-active');
+<!-- WEEKLY STOCK -->
+<section class="py-20">
+  <div class="max-w-6xl mx-auto px-6">
 
-            // Save preference
-            localStorage.setItem('oasisLanguage', lang);
-        }
+    <h2 class="lux-title text-3xl text-center mb-12">
+      <span class="lang-en">Weekly Availability</span>
+      <span class="lang-th">สินค้าพร้อมส่ง</span>
+      <span class="lang-dv">ސްޓޮކް</span>
+    </h2>
 
-        // Run on load
-        window.onload = () => {
-            const savedLang = localStorage.getItem('oasisLanguage') || 'en';
-            setLanguage(savedLang);
-        };
-    </script>
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="border p-6 rounded-2xl">
+        <h3 class="font-semibold text-lg mb-2">Mango Nam Dok Mai</h3>
+        <p class="text-sm text-slate-500">Air shipment • AA grade</p>
+        <p class="mt-2 text-sm">500kg available</p>
+      </div>
+
+      <div class="border p-6 rounded-2xl">
+        <h3 class="font-semibold text-lg mb-2">Dragon Fruit</h3>
+        <p class="text-sm text-slate-500">Premium grade</p>
+        <p class="mt-2 text-sm">300kg available</p>
+      </div>
+
+      <div class="border p-6 rounded-2xl">
+        <h3 class="font-semibold text-lg mb-2">Eggs AA</h3>
+        <p class="text-sm text-slate-500">Export packaging</p>
+        <p class="mt-2 text-sm">1,200 trays</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 bg-black text-white text-center">
+  <h2 class="lux-title text-3xl mb-6">
+    <span class="lang-en">Start Your First Order</span>
+    <span class="lang-th">เริ่มออเดอร์แรก</span>
+    <span class="lang-dv">ފަށާ</span>
+  </h2>
+
+  <a href="https://wa.me/66921563555"
+     class="px-8 py-4 bg-white text-black rounded-xl font-semibold">
+     WhatsApp Now
+  </a>
+</section>
+
+<!-- SCRIPT -->
+<script>
+function setLang(lang) {
+  document.body.setAttribute("lang", lang);
+
+  if (lang === "dv") {
+    document.body.setAttribute("dir", "rtl");
+  } else {
+    document.body.setAttribute("dir", "ltr");
+  }
+
+  document.getElementById("btn-en").classList.remove("active-lang");
+  document.getElementById("btn-th").classList.remove("active-lang");
+  document.getElementById("btn-dv").classList.remove("active-lang");
+
+  document.getElementById("btn-" + lang).classList.add("active-lang");
+
+  localStorage.setItem("lang", lang);
+}
+
+window.onload = function () {
+  const saved = localStorage.getItem("lang") || "en";
+  setLang(saved);
+};
+</script>
 
 </body>
 </html>
