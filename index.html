@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Oasis Plus | B2B Sourcing & Export Operations</title>
+    <meta name="description" content="Direct export supplier of Thai fruits, vegetables, and frozen poultry for high-volume commercial importers and hospitality procurement.">
+    
+    <meta property="og:site_name" content="Oasis Plus" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Oasis Plus",
+      "url": "https://www.oasisplus-fruits.com/",
+      "alternateName": ["Oasis Plus Export", "Oasis Fresh"]
+    }
+    </script>
+
+    <link rel="icon" type="image/png" href="assets/logotab.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #064E3B; 
+            --secondary: #047857; 
+            --accent: #D97706; 
+            --white: #FFFFFF;
+            --bg-light: #F1F5F9;
+            --text-dark: #1E293B;
+            --text-gray: #475569;
+            --shadow-card: 0 4px 20px rgba(0,0,0,0.06);
+            --transition: all 0.3s ease;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--white); 
+            color: var(--text-dark); 
+            line-height: 1.6; 
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 { color: var(--primary); font-weight: 700; }
+        h1 { font-size: clamp(2.0rem, 4.5vw, 3.2rem); line-height: 1.2; margin-bottom: 24px; text-transform: capitalize; }
+        h2 { font-size: clamp(1.8rem, 3vw, 2.2rem); margin-bottom: 1.5rem; text-align: center; }
+        h2::after { content: ''; display: block; width: 50px; height: 4px; background: var(--accent); margin: 15px auto 0; }
+        
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 25px; }
+        .section { padding: 100px 0; }
+        .bg-light { background-color: var(--bg-light); }
+
+        /* HEADER */
+        header { 
+            position: fixed; top: 0; width: 100%; z-index: 1000; 
+            background: rgba(255, 255, 255, 0.98); 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+        header.scrolled { padding: 12px 0; }
+        .logo { text-decoration: none; color: var(--primary); font-weight: 800; font-size: 1.4rem; display: flex; align-items: center; gap: 8px;} 
+        
+        .nav-menu { display: flex; gap: 30px; }
+        .nav-menu a { 
+            color: var(--text-dark); font-weight: 600; font-size: 0.85rem; 
+            text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px;
+            transition: var(--transition);
+        }
+        .nav-menu a:hover { color: var(--accent); }
+        .hamburger { display: none; cursor: pointer; font-size: 1.5rem; }
+
+        /* HERO */
+        .hero { 
+            min-height: 100vh; display: flex; align-items: center; 
+            background: linear-gradient(rgba(6, 78, 59, 0.85), rgba(6, 78, 59, 0.9)), url('assets/hero-bg.jpg') center/cover no-repeat;
+            color: var(--white);
+            padding-top: 80px;
+        }
+        .hero-content { max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero p { font-size: 1.15rem; margin-bottom: 25px; opacity: 0.95; font-weight: 400; line-height: 1.8; }
+        .credibility-bar { display: flex; gap: 20px; font-size: 0.9rem; font-weight: 600; margin-bottom: 25px; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; justify-content: center; }
+        
+        .hero-bullets { list-style: none; margin: 0 auto 40px; text-align: left; display: inline-block; background: rgba(0,0,0,0.3); padding: 25px 40px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); }
+        .hero-bullets li { font-size: 1.1rem; margin-bottom: 12px; display: flex; align-items: center; gap: 15px; font-weight: 500; }
+        .hero-bullets li:last-child { margin-bottom: 0; }
+        .hero-bullets i { color: #25D366; font-size: 1.2rem; }
+
+        /* BUTTONS */
+        .btn { 
+            padding: 18px 36px; border-radius: 4px; font-weight: 700; 
+            text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+            transition: var(--transition); font-size: 0.9rem; letter-spacing: 1px; border: none; cursor: pointer;
+        }
+        .btn-gold { background: var(--accent); color: white; }
+        .btn-gold:hover { background: #B45309; transform: translateY(-2px); }
+        .btn-wa { background: #25D366; color: white; }
+        .btn-wa:hover { background: #1EA952; transform: translateY(-2px); }
+
+        .cta-group { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+        /* GRIDS & CARDS */
+        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px; }
+        .trust-item { text-align: center; padding: 40px 30px; background: white; border-radius: 8px; box-shadow: var(--shadow-card); border-top: 4px solid var(--primary); }
+        .trust-item i { font-size: 2.5rem; color: var(--accent); margin-bottom: 20px; }
+        .trust-item h3 { font-size: 1.2rem; margin-bottom: 15px; }
+        .trust-item p { font-size: 0.95rem; color: var(--text-gray); }
+
+        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .product-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-card); transition: var(--transition); display: flex; flex-direction: column; border: 1px solid #E2E8F0; }
+        .product-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .product-card img { width: 100%; height: 220px; object-fit: cover; }
+        .card-body { padding: 30px; flex-grow: 1; }
+        .card-body h3 { font-size: 1.25rem; margin-bottom: 15px; border-bottom: 1px solid #E2E8F0; padding-bottom: 10px; }
+        
+        .spec-list { list-style: none; }
+        .spec-list li { font-size: 0.95rem; margin-bottom: 12px; color: var(--text-dark); display: flex; align-items: flex-start; gap: 12px; }
+        .spec-list li i { color: var(--accent); margin-top: 4px; font-size: 0.9rem; }
+        .spec-list strong { color: var(--primary); }
+
+        /* PROCESS STEPS */
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 40px; }
+        .process-step { background: white; padding: 35px 25px; border-radius: 8px; text-align: center; position: relative; border: 1px solid #E2E8F0; box-shadow: var(--shadow-card); }
+        .process-number { font-size: 4rem; font-weight: 800; color: var(--bg-light); position: absolute; top: 10px; right: 20px; z-index: 0; line-height: 1; }
+        .process-step h4 { font-size: 1.1rem; margin-bottom: 10px; position: relative; z-index: 1; color: var(--primary); }
+        .process-step p { font-size: 0.9rem; color: var(--text-gray); position: relative; z-index: 1; margin: 0; }
+
+        /* LOGISTICS */
+        .split-row { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 40px; }
+        .logistics-list { list-style: none; margin-top: 30px; }
+        .logistics-list li { margin-bottom: 25px; background: white; padding: 20px; border-radius: 8px; border-left: 4px solid var(--accent); box-shadow: var(--shadow-card); }
+        .logistics-list h4 { color: var(--primary); font-size: 1.1rem; margin-bottom: 8px; }
+        .logistics-list p { font-size: 0.95rem; margin: 0; color: var(--text-gray); }
+
+        /* CONTACT */
+        .contact-flex { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; margin-top: 40px; }
+        .info-item { margin-bottom: 35px; background: white; padding: 25px; border-radius: 8px; border: 1px solid #E2E8F0; }
+        .info-item h4 { text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; color: var(--accent); margin-bottom: 10px; }
+        .info-link { font-size: 1.3rem; font-weight: 700; color: var(--primary); text-decoration: none; display: block; }
+        
+        form { background: white; padding: 45px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 5px solid var(--primary); }
+        input, select, textarea { width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #CBD5E1; border-radius: 4px; font-family: inherit; font-size: 1rem; background: #F8FAFC; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary); background: white; }
+        label { display: block; margin-bottom: 8px; font-weight: 700; font-size: 0.9rem; color: var(--text-dark); }
+
+        /* FLOATING */
+        .float-btn { position: fixed; right: 25px; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 28px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1000; transition: var(--transition); text-decoration: none; }
+        .wa-float { bottom: 25px; background: #25D366; }
+        .fb-float { bottom: 105px; background: #1877F2; }
+        .float-btn:hover { transform: scale(1.1); }
+
+        @media (max-width: 900px) {
+            .nav-menu { position: fixed; top: 70px; left: -100%; width: 100%; background: white; flex-direction: column; padding: 40px; text-align: center; transition: 0.4s; box-shadow: 0 10px 10px rgba(0,0,0,0.05); }
+            .nav-menu.active { left: 0; }
+            .hamburger { display: block; }
+            .split-row, .contact-flex { grid-template-columns: 1fr; gap: 40px; }
+            .hero-bullets { width: 100%; padding: 20px; }
+            .hero-bullets li { font-size: 0.95rem; }
+            .cta-group { flex-direction: column; }
+            .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-leaf" style="color: var(--accent);"></i> OASIS PLUS
+            </a>
+
+            <div class="hamburger" id="mobile-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#about">About</a>
+                <a href="#clients">Market Coverage</a>
+                <a href="#products">Export Catalog</a>
+                <a href="#process">Operations</a>
+                <a href="#contact">Request Quote</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="credibility-bar">
+                        <span><i class="fa-solid fa-ship"></i> Direct Export Operations</span>
+                        <span><i class="fa-solid fa-scale-balanced"></i> 500kg Minimum Volume</span>
+                    </div>
+                    
+                    <h1>Scheduled Export Supply of Thai Agricultural & Poultry Products</h1>
+                    
+                    <p>We execute high-volume procurement and export operations for commercial importers, regional distributors, and hospitality procurement teams requiring continuous, documented supply chain management.</p>
+                    
+                    <ul class="hero-bullets">
+                        <li><i class="fa-solid fa-circle-check"></i> Standardized Weekly Air & Sea Freight Schedules</li>
+                        <li><i class="fa-solid fa-temperature-snow"></i> Documented End-to-End Cold Chain Integrity</li>
+                        <li><i class="fa-solid fa-certificate"></i> Verified GAP, HACCP, and Halal Sourcing Facilities</li>
+                        <li><i class="fa-solid fa-globe"></i> Active Supply Routes to the Maldives and Middle East</li>
+                    </ul>
+
+                    <div class="cta-group">
+                        <a href="#contact" class="btn btn-gold">
+                            <i class="fa-solid fa-file-invoice-dollar"></i> Request Operational Quote
+                        </a>
+                        <a href="https://wa.me/66921563555" class="btn btn-wa" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i> Contact Export Desk
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section bg-light">
+            <div class="container">
+                <div class="split-row">
+                    <div>
+                        <h2 style="text-align: left;">Corporate Overview</h2>
+                        <p style="font-size: 1.1rem; color: var(--text-dark); margin-bottom: 20px;"><strong>Oasis Plus Export Co., Ltd.</strong> is a specialized B2B export and sourcing company headquartered in Bangkok, Thailand.</p>
+                        <p style="font-size: 1.1rem; color: var(--text-dark);">We serve as the centralized procurement and logistics arm for international wholesale buyers. Our operations are structured to bridge the gap between regional agricultural producers and global import markets, maintaining strict adherence to product specifications, compliance documentation, and freight timelines.</p>
+                    </div>
+                    <div>
+                        <img src="assets/corporate-logistics.jpg" alt="Export Operations Center" style="width:100%; border-radius: 8px; box-shadow: var(--shadow-card);" onerror="this.src='https://via.placeholder.com/800x600?text=Operations+Center';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>Operational Transparency</h2>
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <h3>Weekly Shipment Schedules</h3>
+                        <p>Freight dispatch is synchronized with established air and sea carrier routes to maintain consistent inventory cycles for our buyers.</p>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                        <h3>Pre-Loading Inspection</h3>
+                        <p>Onsite physical QC ensures accurate grading, weight verification, and defect elimination prior to final carton sealing and palletization.</p>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fa-solid fa-camera"></i>
+                        <h3>Visual Dispatch Proof</h3>
+                        <p>Clients receive comprehensive photo and video documentation of their specific cargo immediately prior to airport handover or container sealing.</p>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fa-solid fa-temperature-arrow-down"></i>
+                        <h3>Temperature Control Handling</h3>
+                        <p>Thermal tracking is utilized from blast-freezing and active pre-cooling facilities through to reefer loading and final port arrival.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="section bg-light">
+            <div class="container">
+                <h2>Export Execution Process</h2>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <span class="process-number">1</span>
+                        <h4>Order & Feasibility</h4>
+                        <p>Validation of requested volumes, specification tolerances, and current vessel/flight availability.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-number">2</span>
+                        <h4>Procurement & QC</h4>
+                        <p>Physical sourcing, onsite grading, and physical removal of defects to meet exact commercial specifications.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-number">3</span>
+                        <h4>Visual Confirmation</h4>
+                        <p>Client approval is secured via pre-shipment photos and real-time cargo videos before dispatch.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-number">4</span>
+                        <h4>Cold Chain Loading</h4>
+                        <p>Transfer of goods into active cooling environments, including blast freezing or standard pre-cooling.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-number">5</span>
+                        <h4>Freight Dispatch</h4>
+                        <p>Secure handover to designated forwarding agents alongside full digital transmission of shipping documents.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>Standardized Export Documentation</h2>
+                <p style="text-align: center; color: var(--text-gray); margin-bottom: 50px; font-size: 1.1rem;">We facilitate smooth customs clearance by ensuring all regulatory paperwork is accurately prepared and transmitted prior to cargo arrival.</p>
+                
+                <div class="grid-cards" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div class="trust-item" style="border-top: 4px solid var(--secondary);">
+                        <i class="fa-solid fa-leaf"></i>
+                        <h4>Phytosanitary Certificate</h4>
+                    </div>
+                    <div class="trust-item" style="border-top: 4px solid var(--secondary);">
+                        <i class="fa-solid fa-file-contract"></i>
+                        <h4>Certificate of Origin</h4>
+                    </div>
+                    <div class="trust-item" style="border-top: 4px solid var(--secondary);">
+                        <i class="fa-solid fa-file-invoice"></i>
+                        <h4>Commercial Invoice & Packing List</h4>
+                    </div>
+                    <div class="trust-item" style="border-top: 4px solid var(--secondary);">
+                        <i class="fa-solid fa-shield-halal"></i>
+                        <h4>Health Certificate (Poultry)</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="clients" class="section bg-light">
+            <div class="container">
+                <h2>Buyer Profiles</h2>
+                <div class="grid-cards">
+                    <div class="product-card" style="border-top: 4px solid var(--accent);">
+                        <div class="card-body">
+                            <h3>Hotel Procurement</h3>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-check"></i> <strong>Target:</strong> Hospitality sector</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Format:</strong> Mixed consolidated pallets</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Frequency:</strong> Scheduled air-freight</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-card" style="border-top: 4px solid var(--accent);">
+                        <div class="card-body">
+                            <h3>Importers & Distributors</h3>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-check"></i> <strong>Target:</strong> Regional market suppliers</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Format:</strong> FCL (Full Container Loads)</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Commitment:</strong> Programmed supply</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-card" style="border-top: 4px solid var(--accent);">
+                        <div class="card-body">
+                            <h3>Wholesale Markets</h3>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-check"></i> <strong>Target:</strong> Direct wholesale channels</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Pricing:</strong> Volume-based modeling</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Packaging:</strong> Standard export cartons</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="section">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 50px;">
+                    <h2>Commercial Export Catalog</h2>
+                    <p style="color: var(--text-gray); font-size: 1.1rem;">Graded products, calculated supply metrics, and precise commercial packaging.</p>
+                </div>
+                
+                <div class="grid-cards">
+                    <div class="product-card">
+                        <img src="assets/vegetables.jpg" alt="Thai Vegetables Export" onerror="this.src='https://via.placeholder.com/600x400?text=Fresh+Vegetables';">
+                        <div class="card-body">
+                            <h3>Fresh Vegetables</h3>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-box-open"></i> <strong>Packaging:</strong> Corrugated export cartons</li>
+                                <li><i class="fa-solid fa-plane-departure"></i> <strong>Shipping:</strong> Scheduled Air Freight</li>
+                                <li><i class="fa-solid fa-weight-scale"></i> <strong>MOQ:</strong> 500kg minimum</li>
+                                <li><i class="fa-solid fa-list-check"></i> <strong>Items:</strong> Asparagus, Baby Corn, Lemongrass</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="assets/fruits.jpg" alt="Thai Fruits Export" onerror="this.src='https://via.placeholder.com/600x400?text=Tropical+Fruits';">
+                        <div class="card-body">
+                            <h3>Tropical Fruits</h3>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-box-open"></i> <strong>Packaging:</strong> Ventilated export cartons</li>
+                                <li><i class="fa-solid fa-plane-departure"></i> <strong>Shipping:</strong> Air & Sea Freight</li>
+                                <li><i class="fa-solid fa-weight-scale"></i> <strong>MOQ:</strong> 500kg minimum</li>
+                                <li><i class="fa-solid fa-list-check"></i> <strong>Items:</strong> Mango, Durian, Mangosteen</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="assets/chicken.jpg" alt="Frozen Poultry Export" onerror="this.src='https://via.placeholder.com/600x400?text=Frozen+Poultry';">
+                        <div class="card-body">
+                            <h3>Frozen Poultry</h3>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-box-open"></i> <strong>Packaging:</strong> Blast-frozen (-18°C) parts</li>
+                                <li><i class="fa-solid fa-ship"></i> <strong>Shipping:</strong> Sea Freight (Reefer)</li>
+                                <li><i class="fa-solid fa-weight-scale"></i> <strong>MOQ:</strong> 1x 20ft Container</li>
+                                <li><i class="fa-solid fa-list-check"></i> <strong>Certs:</strong> Halal & GMP Processing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="assets/coconut.jpg" alt="Thai Coconuts Export" onerror="this.src='https://via.placeholder.com/600x400?text=Fragrant+Coconuts';">
+                        <div class="card-body">
+                            <h3>Fragrant Coconuts</h3>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-box-open"></i> <strong>Packaging:</strong> Diamond-cut or Polished</li>
+                                <li><i class="fa-solid fa-ship"></i> <strong>Shipping:</strong> Sea Freight</li>
+                                <li><i class="fa-solid fa-weight-scale"></i> <strong>MOQ:</strong> 1x 20ft Container</li>
+                                <li><i class="fa-solid fa-list-check"></i> <strong>Variety:</strong> Standardized "Nam Hom"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section bg-light">
+            <div class="container">
+                <div class="split-row">
+                    <div>
+                        <h2 style="text-align: left;">Direct Operational Accountability</h2>
+                        <p style="font-size: 1.1rem; color: var(--text-dark); margin-bottom: 20px;">When you partner with Oasis Plus Export Co., Ltd., you communicate directly with our in-house export team stationed in Bangkok.</p>
+                        <p style="font-size: 1.1rem; color: var(--text-dark);">We do not route communications through third-party brokers. From the initial submission of your requirements to the final clearance at your destination port, a dedicated project coordinator is assigned to manage your account, ensuring full accountability for your shipment's execution and timeline.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <i class="fa-solid fa-users-gear" style="font-size: 8rem; color: var(--primary); opacity: 0.1;"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-flex">
+                    <div>
+                        <h2 style="text-align: left;">Initiate Procurement</h2>
+                        <p style="font-size: 1.1rem; margin-bottom: 20px;">Contact our export desk to discuss volume capabilities, freight modeling, and current FOB/CIF pricing.</p>
+                        <p style="font-size: 1rem; color: var(--text-gray); font-weight: 600; margin-bottom: 40px; padding: 10px; border-left: 4px solid var(--accent); background: var(--bg-light);">We work exclusively with committed importers and wholesale buyers.</p>
+                        
+                        <div class="info-item">
+                            <h4>Operations & WhatsApp</h4>
+                            <a href="https://wa.me/66921563555" class="info-link" target="_blank">+66 92 156 3555</a>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h4>Commercial Inquiries</h4>
+                            <a href="mailto:sales@oasisplus-fruits.com" class="info-link">sales@oasisplus-fruits.com</a>
+                        </div>
+
+                        <div class="info-item">
+                            <h4>Headquarters</h4>
+                            <span class="info-link" style="color: var(--text-dark); font-weight: 500;">Bangkok, Thailand</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <form action="https://formspree.io/f/mojqeqaz" method="POST">
+                            <h3 style="margin-bottom: 25px; font-size: 1.5rem; color: var(--text-dark);">Submit Operational Requirements</h3>
+                            
+                            <label>Registered Company Name</label>
+                            <input type="text" name="company" placeholder="Legal Entity Name" required>
+                            
+                            <label>Procurement Contact Email</label>
+                            <input type="email" name="email" placeholder="purchasing@yourcompany.com" required>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div>
+                                    <label>Destination Port</label>
+                                    <input type="text" name="port" placeholder="Arrival Port/Airport" required>
+                                </div>
+                                <div>
+                                    <label>Primary Commodity</label>
+                                    <select name="interest" required>
+                                        <option value="" disabled selected>Select Category...</option>
+                                        <option value="vegetables">Fresh Vegetables</option>
+                                        <option value="fruits">Tropical Fruits</option>
+                                        <option value="chicken">Frozen Poultry</option>
+                                        <option value="coconut">Fragrant Coconuts</option>
+                                        <option value="mixed">Mixed Consolidated Freight</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <label>Volume Metrics & Specification</label>
+                            <textarea name="message" rows="5" placeholder="Please outline weekly/monthly volume requirements, specific packaging needs, and preferred incoterms (FOB/CIF)." required></textarea>
+                            
+                            <button type="submit" class="btn btn-gold" style="width: 100%; font-size: 1.1rem; padding: 20px;">
+                                Submit Request For Quotation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background: #0F172A; color: #94A3B8; padding: 40px 0; text-align: center; border-top: 5px solid var(--accent);">
+        <div class="container">
+            <p style="font-size: 1.1rem; margin-bottom: 5px; font-weight: 600; color: white;">Oasis Plus Export Co., Ltd.</p>
+            <p style="font-size: 0.9rem; margin-bottom: 15px;">Bangkok, Thailand</p>
+            <p style="font-size: 0.85rem; margin-bottom: 15px;">Email: sales@oasisplus-fruits.com | WhatsApp: +66 92 156 3555</p>
+            <p style="font-size: 0.85rem; opacity: 0.7;">B2B Agricultural Sourcing, Quality Control, and Global Logistics.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/66921563555" class="float-btn wa-float" target="_blank" title="Contact Operations Desk">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        const toggle = document.getElementById('mobile-toggle');
+        const nav = document.getElementById('nav-menu');
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
